@@ -1,9 +1,11 @@
 <script>
+    import LogoAnimation from "../components/animated-logo/LogoAnimation.svelte";
+
    
 </script>
 <div class="wrapper">
     <div class="center">
-        Test
+        <LogoAnimation/>
     </div>
 </div>
 <style>
@@ -15,9 +17,5 @@
         height: 100%;
         display: grid;
         place-items: center;
-        color: #ff3e00;
-        transform: rotate(-25deg);
-        fill-opacity: 0;
-        stroke-width: 2;
     }
 </style>

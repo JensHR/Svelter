@@ -9,7 +9,7 @@
     $: prev = (currentIndex > 0) ? pageOrder[currentIndex -1] : null
 
     const keyNavListener = e => {
-        if((e.key === ' ' || e.key === 'ArrowRight') && next != null) {
+        if((e.key === 'ArrowRight') && next != null) {
             goto(next)
         } else if(e.key === 'ArrowLeft' && prev != null) {
             goto(prev)
@@ -25,14 +25,22 @@
         <nav>
             {#if prev}
                 <a href={prev}>prev</a>
+            {:else}
+                <a href='/'>home</a>
             {/if}
-            {#if next}
-                <a href={next}>{currentIndex === 0 ? 'start':'next'}</a>
-            {/if}
+            <div class="right">
+                {#if next}
+                    <a href={next}>{currentIndex === 0 ? 'start':'next'}</a>
+                {/if}
+            </div>
         </nav>
     </div>
 </footer>
 <style>
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
     .container {
         display: flex;
         flex-direction: column;
@@ -47,11 +55,17 @@
             
         }
     }
+    .right {
+        display: flex;
+        gap: 1rem;
+        flex-shrink: 0;
+    }
 
     nav {
         display: flex;
         gap: 0.5rem;
         align-items: center;
         justify-content: space-between;
+        flex-grow: 1;
     }
 </style>
