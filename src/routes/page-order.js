@@ -9,8 +9,9 @@ export const pageOrder = [
     '/slides/compiler/landing',
     '/slides/compiler/list',
     '/slides/compiler/image',
-    '/slides/framework',
-    '/slides/',
+    '/slides/framework/landing',
+    '/slides/framework/list',
+    '/slides/framework/image',
     '',
     '',
 ]

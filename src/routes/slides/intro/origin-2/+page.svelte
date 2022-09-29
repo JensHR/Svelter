@@ -5,6 +5,9 @@
 <h2>
     Svelte 
 </h2>
+<h3>
+    Created by Rich Harris
+</h3>
 <p>
     Open source
 </p>
